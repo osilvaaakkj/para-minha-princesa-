@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para você, minha princesa ❤️</title>
+<title>Para minha princesa ❤️</title>
 
 <style>
 * {
@@ -17,15 +17,28 @@ body {
   min-height: 100vh;
   background: linear-gradient(145deg, #100d19, #28152d, #171323);
   color: white;
-  font-family: Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   text-align: center;
   overflow-x: hidden;
+}
+
+#entrada {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+#siteContent {
+  display: none;
 }
 
 .container {
   width: 90%;
   max-width: 430px;
-  margin: 65px auto;
+  margin: 40px auto;
   padding: 30px 22px;
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.15);
@@ -35,8 +48,8 @@ body {
 
 .heart {
   font-size: 48px;
-  animation: pulse 1.5s infinite
-
+  animation: pulse 1.5s infinite;
+}
 
 h1 {
   color: #ff9ecb;
@@ -56,14 +69,16 @@ p {
 }
 
 button {
-  background: #e85b9c;
+  background: linear-gradient(135deg, #ff5caa, #c83b83);
   color: white;
-  border: none;
-  padding: 14px 25px;
+  border: 1px solid #ffb6d9;
+  padding: 15px 25px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
+  box-shadow: 0 5px 20px #ff5caa55;
 }
 
 .message {
@@ -74,9 +89,19 @@ button {
   border-radius: 15px;
 }
 
-audio {
-  width: 100%;
-  margin-top: 18px;
+#declaracao {
+  display: none;
+  margin-top: 20px;
+  padding: 22px;
+  background: #fff0f5;
+  border-radius: 18px;
+  color: #542b3a;
+  line-height: 1.7;
+}
+
+#declaracao p {
+  color: #542b3a;
+  margin-top: 12px;
 }
 
 footer {
@@ -85,16 +110,16 @@ footer {
   font-size: 13px;
 }
 
-@keyframes pulse {
-  50% { transform: scale(1.2); }
-}
-
 .floating {
   position: fixed;
   bottom: -30px;
   color: #ff8dbb;
   animation: subir 7s linear infinite;
   pointer-events: none;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.2); }
 }
 
 @keyframes subir {
@@ -107,79 +132,129 @@ footer {
 </head>
 
 <body>
-<div id="entrada" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:25px;text-align:center;">
+
+<div id="entrada">
   <div style="font-size:60px;">❤️</div>
   <h1>Para Minha Princesa</h1>
   <p>Preparei uma surpresa especial para você...</p>
   <button onclick="abrirSurpresa()">Abrir minha surpresa ❤️</button>
 </div>
 
-<div id="siteContent" style="display:none;">
-<div class="container">
+<div id="siteContent">
 
-<div class="heart">❤️</div>
+  <div class="container">
 
-<h1>Para você, minha princesa</h1>
+    <div class="heart">❤️</div>
 
-<p>
-Fiz esse cantinho especialmente para você.
-Talvez nenhuma palavra seja suficiente para
-explicar o quanto você é especial para mim.
-</p>
+    <h1>Para você, minha princesa</h1>
 
-<h2>Uma declaração 💌</h2>
+    <p>
+      Fiz esse cantinho especialmente para você.
+      Talvez nenhuma palavra seja suficiente para
+      explicar o quanto você é especial para mim.
+    </p>
 
-<p>
-Eu não sei explicar exatamente como você
-conseguiu se tornar tão importante para mim.
-Só sei que você consegue deixar meus dias
-melhores simplesmente sendo você.
+    <h2>Uma declaração 💌</h2>
 
-Quero que você saiba que gosto muito de você,
-do seu jeitinho, do seu sorriso e de cada
-pequeno detalhe que faz você ser única.
+    <p>
+      Eu não sei explicar exatamente como você
+      conseguiu se tornar tão importante para mim.
+      Só sei que você consegue deixar meus dias
+      melhores simplesmente sendo você.
 
-Você é uma pessoa muito especial na minha vida.
-Nunca se esqueça disso. ❤️
-</p>
+      Quero que você saiba que gosto muito de você,
+      do seu jeitinho, do seu sorriso e de cada
+      pequeno detalhe que faz você ser única.
 
-<h2>Uma surpresa para você ✨</h2>
+      Você é uma pessoa muito especial na minha vida.
+      Nunca se esqueça disso. ❤️
+    </p>
 
-<button onclick="mostrarMensagem()">
-Clique aqui, minha princesa ❤️
-</button>
+    <h2>Uma surpresa para você ✨</h2>
 
-<div class="message" id="mensagem">
-<p>
-Se eu pudesse escolher novamente,
-ainda escolheria conhecer você.
-Você é meu carinho em forma de pessoa. ❤️
-</p>
-</div>
+    <button onclick="mostrarMensagem()">
+      Clique aqui, minha princesa ❤️
+    </button>
 
-<h2>Essa musica me lembra você!</h2>
+    <div class="message" id="mensagem">
+      <p>
+        Se eu pudesse escolher novamente,
+        ainda escolheria conhecer você.
+        Você é meu carinho em forma de pessoa. ❤️
+      </p>
+    </div>
 
-<p>Uma música que me faz lembrar de você.</p>
+    <h2>Essa música me lembra você!</h2>
+    <p>Uma música que me faz lembrar de você.</p>
 
-<iframe
-  style="border-radius:12px"
-  src="https://open.spotify.com/embed/track/36TbBJ7mLPOZMAYs0p4mxb?utm_source=generator"
-  width="100%"
-  height="152"
-  frameborder="0"
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-  loading="lazy">
-</iframe>
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/36TbBJ7mLPOZMAYs0p4mxb?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
 
-<footer>
-Feito com carinho, especialmente para você. ❤️
-</footer>
+    <h2>Uma coisa que preciso te contar ❤️</h2>
 
+    <button onclick="mostrarDeclaracao()">
+      Ler minha mensagem ❤️
+    </button>
+
+    <div id="declaracao">
+      <h2>Quero te falar uma coisa ❤️</h2>
+
+      <p>
+        Tem uma coisa que eu queria te falar há bastante tempo.
+        Eu tenho vontade de ter algo sério com você, de verdade.
+        Às vezes, fico com medo de falar sobre isso porque não
+        sei qual seria sua resposta e tenho medo de acabar
+        mudando alguma coisa entre nós.
+      </p>
+
+      <p>
+        Eu te amo muito, Luana, e tenho medo de te perder.
+        Não quero que você pense que estou falando isso por falar,
+        porque meus sentimentos são sinceros.
+      </p>
+
+      <p>
+        Eu queria poder construir algo bonito com você,
+        viver momentos juntos e mostrar todos os dias
+        o quanto você é importante pra mim.
+      </p>
+
+      <p>
+        Não espero que você tenha uma resposta agora.
+        Só queria que soubesse o que existe aqui dentro
+        e o quanto eu quero você na minha vida. ❤️
+      </p>
+    </div>
+
+    <footer>
+      Feito com carinho, especialmente para você. ❤️
+    </footer>
+
+  </div>
 </div>
 
 <script>
+function abrirSurpresa() {
+  document.getElementById("entrada").style.display = "none";
+  document.getElementById("siteContent").style.display = "block";
+}
+
 function mostrarMensagem() {
   document.getElementById("mensagem").style.display = "block";
+}
+
+function mostrarDeclaracao() {
+  const caixa = document.getElementById("declaracao");
+
+  caixa.style.display =
+    caixa.style.display === "none" ? "block" : "none";
 }
 
 function criarCoracao() {
@@ -188,6 +263,7 @@ function criarCoracao() {
   coracao.innerHTML = "♥";
   coracao.style.left = Math.random() * 100 + "vw";
   coracao.style.fontSize = (15 + Math.random() * 20) + "px";
+
   document.body.appendChild(coracao);
 
   setTimeout(() => coracao.remove(), 7000);
@@ -195,24 +271,6 @@ function criarCoracao() {
 
 setInterval(criarCoracao, 700);
 </script>
-<div style="text-align:center; margin:25px 15px;">
-  <button onclick="document.getElementById('declaracao').style.display =
-  document.getElementById('declaracao').style.display === 'none' ? 'block' : 'none';"
-  style="background:#e75480;color:white;border:0;padding:14px 22px;border-radius:25px;font-size:16px;cursor:pointer;">
-    Uma coisa que preciso te contar ❤️
-  </button>
 
-  <div id="declaracao" style="display:none;margin-top:20px;padding:22px;background:#fff0f5;border-radius:18px;color:#542b3a;line-height:1.7;">
-    <h2>Quero te falar uma coisa ❤️</h2>
-
-    <p>Tem uma coisa que eu queria te falar há bastante tempo. Eu tenho vontade de ter algo sério com você, de verdade. Às vezes, fico com medo de falar sobre isso porque não sei qual seria sua resposta e tenho medo de acabar mudando alguma coisa entre nós.</p>
-
-    <p>Eu te amo muito, Luana, e tenho medo de te perder. Não quero que você pense que estou falando isso por falar, porque meus sentimentos são sinceros.</p>
-
-    <p>Eu queria poder construir algo bonito com você, viver momentos juntos e mostrar todos os dias o quanto você é importante pra mim.</p>
-
-    <p>Não espero que você tenha uma resposta agora. Só queria que soubesse o que existe aqui dentro e o quanto eu quero você na minha vida. ❤️</p>
-  </div>
-</div>  
 </body>
 </html>
