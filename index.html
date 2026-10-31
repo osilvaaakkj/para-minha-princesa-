@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para você, minha princesa ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #100d19, #28152d, #171323);
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 430px;
+  margin: 65px auto;
+  padding: 30px 22px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 22px;
+  box-shadow: 0 0 35px #d64c8b25;
+}
+
+.heart {
+  font-size: 48px;
+  animation: pulse 1.5s infinite;
+}
+
+h1 {
+  color: #ff9ecb;
+  font-size: 30px;
+  margin: 18px 0;
+}
+
+h2 {
+  color: #ffc1dc;
+  margin: 25px 0 12px;
+}
+
+p {
+  color: #f5e8f0;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+button {
+  background: #e85b9c;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.message {
+  display: none;
+  margin-top: 20px;
+  padding: 18px;
+  background: #ffffff12;
+  border-radius: 15px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 18px;
+}
+
+footer {
+  color: #e9a5c6;
+  margin-top: 28px;
+  font-size: 13px;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.2); }
+}
+
+.floating {
+  position: fixed;
+  bottom: -30px;
+  color: #ff8dbb;
+  animation: subir 7s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes subir {
+  to {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Para você, minha princesa</h1>
+
+<p>
+Fiz esse cantinho especialmente para você.
+Talvez nenhuma palavra seja suficiente para
+explicar o quanto você é especial para mim.
+</p>
+
+<h2>Uma declaração 💌</h2>
+
+<p>
+Eu não sei explicar exatamente como você
+conseguiu se tornar tão importante para mim.
+Só sei que você consegue deixar meus dias
+melhores simplesmente sendo você.
+
+Quero que você saiba que gosto muito de você,
+do seu jeitinho, do seu sorriso e de cada
+pequeno detalhe que faz você ser única.
+
+Você é uma pessoa muito especial na minha vida.
+Nunca se esqueça disso. ❤️
+</p>
+
+<h2>Uma surpresa para você ✨</h2>
+
+<button onclick="mostrarMensagem()">
+Clique aqui, minha princesa ❤️
+</button>
+
+<div class="message" id="mensagem">
+<p>
+Se eu pudesse escolher novamente,
+ainda escolheria conhecer você.
+Você é meu carinho em forma de pessoa. ❤️
+</p>
+</div>
+
+<h2>Nossa música 🎵</h2>
+
+<p>Uma música que me faz lembrar de você.</p>
+
+<audio controls>
+<source src="mary.mp3" type="audio/mpeg">
+Seu navegador não suporta áudio.
+</audio>
+
+<footer>
+Feito com carinho, especialmente para você. ❤️
+</footer>
+
+</div>
+
+<script>
+function mostrarMensagem() {
+  document.getElementById("mensagem").style.display = "block";
+}
+
+function criarCoracao() {
+  const coracao = document.createElement("div");
+  coracao.className = "floating";
+  coracao.innerHTML = "♥";
+  coracao.style.left = Math.random() * 100 + "vw";
+  coracao.style.fontSize = (15 + Math.random() * 20) + "px";
+  document.body.appendChild(coracao);
+
+  setTimeout(() => coracao.remove(), 7000);
+}
+
+setInterval(criarCoracao, 700);
+</script>
+
+</body>
+</html>
